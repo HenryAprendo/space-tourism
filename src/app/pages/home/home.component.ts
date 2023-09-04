@@ -6,9 +6,14 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class HomeComponent {
+
+  isMenuActive = false;
+
+  toggleIsMenu(){
+    this.isMenuActive = !this.isMenuActive;
+  }
 
 }
