@@ -1,40 +1,8 @@
 
-
-<div
-  class="bg-cover bg-center bg-no-repeat mx-auto h-screen pl-6 pr-6 pt-6 text-sky-blue md:pt-0 md:pr-0 md:max-w-3xl xl:max-w-full xl:pt-6"
-  style="background-image: url('./../../../assets/home/background-home-mobile.jpg');"
+<section
+  class="home_container bg-cover bg-center bg-no-repeat mx-auto h-screen pl-6 pr-6 pt-6 text-sky-blue md:pt-0 md:pr-0 md:max-w-3xl xl:max-w-full xl:pt-6"
 >
-  <header class="flex justify-between items-center mb-5">
-    <div class="w-10 h-10 xl:w-12 xl:h-12">
-      <figure class="w-10 h-10 rounded-full bg-white xl:w-12 xl:h-12">
-        <img src="./../../../assets/shared/logo.svg" alt="icon logo" >
-      </figure>
-    </div>
-    <figure class="block md:hidden">
-      <img src="./../../../assets/shared/icon-hamburger.svg" alt="icon menu" (click)="toggleIsMenu()">
-    </figure>
-
-    <!-- Navagación tablet y desktop -->
-    <div class="relative text-white hidden md:block" >
-      <nav>
-        <ul class="w-[450px] flex items-center justify-center gap-x-9 backdrop-blur-2xl bg-white/5 xl:w-[850px]">
-          <li>
-            <a class="uppercase text-sm block py-12 hover:border-b-2 hover:pb-[46px]" href=""><span class="hidden mr-3 xl:inline">00</span>Home</a>
-          </li>
-          <li>
-            <a class="uppercase text-sm block py-12 hover:border-b-2 hover:pb-[46px]" href=""><span class="hidden mr-3 xl:inline">01</span>Destination</a>
-          </li>
-          <li>
-            <a class="uppercase text-sm block py-12 hover:border-b-2 hover:pb-[46px]" href=""><span class="hidden mr-3 xl:inline">02</span>Crew</a>
-          </li>
-          <li>
-            <a class="uppercase text-sm block py-12 hover:border-b-2 hover:pb-[46px]" href=""><span class="hidden mr-3 xl:inline">04</span>Technology</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="hidden absolute h-0 w-[473px] border-b border-white opacity-25 top-1/2 right-[830px] xl:block"></div>
-    </div>
-  </header>
+  <app-navbar />
 
   <main>
     <div class="text-center">
@@ -43,40 +11,9 @@
       <p class="text-[15px]" >Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
     </div>
   </main>
-</div>
+</section>
 
-<!-- Menu mobile -->
-<div class="md:hidden" *ngIf="isMenuActive">
-  <div class="fixed inset-0 bg-slate-900 opacity-30"></div>
-  <div class="fixed inset-y-0 right-0 w-64 px-8 pt-[116px] shadow-[ 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset] bg-white/5 backdrop-blur-xl" >
-    <ul class="space-y-8 text-white text-base">
-      <li>
-        <a href="/">
-          <span class="mr-3 xl:inline">00</span>Home
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <span class="mr-3 xl:inline">00</span>Destination
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <span class="mr-3 xl:inline">00</span>Crew
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <span class="mr-3 xl:inline">00</span>Technology
-        </a>
-      </li>
-    </ul>
 
-    <figure class="absolute top-4 right-4 hover:cursor-pointer" (click)="toggleIsMenu()" >
-      <img src="./../../../assets/shared/icon-close.svg" alt="icon close" class="h-6 w-6 ">
-    </figure>
-  </div>
-</div>
 
 
 
