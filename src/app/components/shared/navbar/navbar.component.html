@@ -10,9 +10,9 @@
 
   <div class="relative text-white hidden md:block" >
     <nav>
-      <ul class="w-[450px] flex items-center justify-center gap-x-9 backdrop-blur-2xl bg-white/5 xl:w-[850px]">
+      <ul class="h-[120px] w-[450px] flex items-center justify-center gap-x-9 backdrop-blur-2xl bg-white/5 xl:w-[850px]">
         <li *ngFor="let item of itemsNav">
-          <a class="uppercase text-sm block py-12 hover:border-b-2 hover:pb-[46px]" href="">
+          <a class="uppercase text-sm block py-12 " routerLink="/{{item.path}}" routerLinkActive="border-b-2">
             <span class="hidden mr-3 xl:inline">{{item.id}}</span>
             {{item.name}}
           </a>
@@ -29,7 +29,7 @@
     <ul class="space-y-8 text-white text-base">
 
       <li *ngFor="let item of itemsNav">
-        <a>
+        <a routerLink="/{{item.path}}" routerLinkActive="border-b-2">
           <span class="mr-3 xl:inline">{{item.id}}</span>
           {{item.name}}
         </a>

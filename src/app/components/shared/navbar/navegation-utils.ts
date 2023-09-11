@@ -9,21 +9,21 @@ export const itemsNavigation:ItemsNavigation[] = [
   {
     id: '00',
     name: 'home',
-    path:''
+    path:'home'
   },
   {
     id: '01',
     name: 'destination',
-    path:''
+    path:'destination'
   },
   {
     id: '02',
     name: 'crew',
-    path:''
+    path:'crew'
   },
   {
     id: '03',
     name: 'technology',
-    path:''
+    path:'technology'
   },
 ];
