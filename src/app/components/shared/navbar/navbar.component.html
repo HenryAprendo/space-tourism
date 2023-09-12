@@ -1,4 +1,4 @@
-<header class="flex justify-between items-center mb-5">
+<header class="flex justify-between items-center mb-5 md:max-w-3xl xl:max-w-7xl mx-auto">
   <div class="w-10 h-10 xl:w-12 xl:h-12">
     <figure class="w-10 h-10 rounded-full bg-white xl:w-12 xl:h-12">
       <img src="./assets/shared/logo.svg" alt="icon logo" >
@@ -10,16 +10,16 @@
 
   <div class="relative text-white hidden md:block" >
     <nav>
-      <ul class="h-[120px] w-[450px] flex items-center justify-center gap-x-9 backdrop-blur-2xl bg-white/5 xl:w-[850px]">
+      <ul class="h-[96px] w-[450px] flex items-center justify-center gap-x-10 backdrop-blur-2xl bg-white/5 xl:w-[850px] xl:gap-x-12">
         <li *ngFor="let item of itemsNav">
-          <a class="uppercase text-sm block py-12 " routerLink="/{{item.path}}" routerLinkActive="border-b-2">
-            <span class="hidden mr-3 xl:inline">{{item.id}}</span>
+          <a class="uppercase text-sm block py-9 " routerLink="/{{item.path}}" routerLinkActive="border-b-2">
+            <span class="hidden mr-2 xl:inline">{{item.id}}</span>
             {{item.name}}
           </a>
         </li>
       </ul>
     </nav>
-    <div class="hidden absolute h-0 w-[473px] border-b border-white opacity-25 top-1/2 right-[830px] xl:block"></div>
+    <div class="hidden absolute h-0 w-[370px] border-b border-white opacity-25 top-1/2 right-[820px] xl:block"></div>
   </div>
 </header>
 
