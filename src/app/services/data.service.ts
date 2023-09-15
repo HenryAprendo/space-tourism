@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { destinations } from '../data/destinations';
+import { crew } from '../data/crew';
 import { of } from 'rxjs';
 
 @Injectable({
@@ -7,7 +8,9 @@ import { of } from 'rxjs';
 })
 export class DataService {
 
-  destinationList = destinations.slice();
+  private destinationList = destinations.slice();
+
+  private crews = crew.slice();
 
   constructor() { }
 
@@ -20,4 +23,17 @@ export class DataService {
     return of(data);
   }
 
+  getOneCrewByName(name:string){
+    const data = this.crews.find(crew => crew.name === name);
+    return of(data);
+  }
+
 }
+
+
+
+
+
+
+
+

@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { of, switchMap } from 'rxjs';
-import { Destination } from 'src/app/models/destinations.model';
+import { switchMap } from 'rxjs';
+import { Destination } from '../../models/destinations.model';
 import { DataService } from '../../services/data.service';
 
 @Component({

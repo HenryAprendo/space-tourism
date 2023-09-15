@@ -1,7 +1,4 @@
-interface Images {
-  png: string;
-  webp: string;
-}
+import { Images } from '../models/images.model';
 
 export interface Destination {
   name: string;
