@@ -1,0 +1,41 @@
+
+<section class="flex flex-col items-center">
+
+  <div class="block md:hidden">---------------------------------------------------</div>
+
+    <div class="order-1">
+      <button
+        class="h-[10px] w-[10px] rounded-full bg-white m-2"
+        *ngFor="let item of views; index as i"
+        (click)="loadTemplate(i)"
+      >
+      </button>
+    </div>
+
+    <!-- Marcador de posicion para incorporar las vistas -->
+    <ng-content></ng-content>
+
+    <!-- Contenedor de vistas -->
+    <div class="order-2 md:order-none">
+      <ng-template appViewContainer></ng-template>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -23,6 +23,10 @@ export class DataService {
     return of(data);
   }
 
+  getAllCrews(){
+    return of(this.crews);
+  }
+
   getOneCrewByName(name:string){
     const data = this.crews.find(crew => crew.name === name);
     return of(data);

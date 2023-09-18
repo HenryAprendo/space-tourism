@@ -4,11 +4,24 @@
 >
   <app-navbar />
 
-  <main>
-    <section class="uppercase max-w-5xl flex flex-col items-center xl:flex-row xl:justify-between xl:mx-auto">
-      <h2 class="text-white text-base mb-56 md:text-xl md:self-start md:mt-10 xl:m-0 pt-0">
+  <main class="h-[600px]">
+    <section class="uppercase h-full max-w-5xl flex flex-col items-center xl:items-start xl:mx-auto">
+      <h2 class="text-white text-base mb-3 md:text-xl md:self-start md:mt-10 xl:m-0 pt-0">
         <span class="text-sky-blue">01</span> Meet your crew
       </h2>
+      <div class="flex-1">
+        <app-view-container>
+          <ng-container *ngFor="let crew of crews">
+            <ng-template appTemplateRef >
+              <div class="max-w-md text-center">
+                <h3 class="text-base">{{crew.role}}</h3>
+                <h2 class="text-2xl mb-4">{{crew.name}}</h2>
+                <p class="text-[15px]">{{crew.bio}}</p>
+              </div>
+            </ng-template>
+          </ng-container>
+        </app-view-container>
+      </div>
     </section>
   </main>
 </section>
