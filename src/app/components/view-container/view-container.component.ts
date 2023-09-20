@@ -1,7 +1,8 @@
-import { AfterContentInit, Component, ContentChildren, OnInit, QueryList, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList, ViewChild, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewContainerDirective } from '../../directives/view-container.directive';
 import { TemplateRefDirective } from '../../directives/template-ref.directive';
+import { Crew } from '../../models/crew.model';
 
 @Component({
   selector: 'app-view-container',
@@ -12,17 +13,20 @@ import { TemplateRefDirective } from '../../directives/template-ref.directive';
 })
 export class ViewContainerComponent implements AfterContentInit {
 
+  @Input() crewsList:Crew[] = [];
+
   @ContentChildren(TemplateRefDirective) views!:QueryList<TemplateRefDirective>;
 
   @ViewChild(ViewContainerDirective, { static: true }) container!:ViewContainerDirective;
 
-  index = 0;
+  indexPhoto = signal(0);
 
   ngAfterContentInit(): void {
    this.loadTemplate();
   }
 
   loadTemplate(index:number = 0){
+    this.indexPhoto.set(index);
     const actualView = this.views.get(index)!;
     const viewContainer = this.container.viefContainerRef;
     viewContainer.clear();

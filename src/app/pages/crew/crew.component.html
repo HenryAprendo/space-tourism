@@ -1,22 +1,22 @@
 <section
-  class="crew_container bg-cover bg-center bg-no-repeat object-cover max-w-full mx-auto min-h-screen pl-6 pr-6 pt-6 pb-14 text-sky-blue
+  class="crew_container bg-cover bg-center bg-no-repeat object-cover max-w-full min-h-screen pl-6 pr-6 pt-6 pb-14 text-sky-blue
    md:pt-0 md:pr-0 xl:py-6 xl:px-0"
 >
   <app-navbar />
 
-  <main class="h-[600px]">
-    <section class="uppercase h-full max-w-5xl flex flex-col items-center xl:items-start xl:mx-auto">
-      <h2 class="text-white text-base mb-3 md:text-xl md:self-start md:mt-10 xl:m-0 pt-0">
-        <span class="text-sky-blue">01</span> Meet your crew
+  <main>
+    <section class="uppercase max-w-5xl flex flex-col items-center xl:items-start xl:mx-auto">
+      <h2 class="text-white text-base mb-8 md:text-xl md:self-start md:mt-10 md:mb-16 xl:m-0 pt-0">
+        <span class="text-sky-blue">02</span> Meet your crew
       </h2>
-      <div class="flex-1">
-        <app-view-container>
+      <div>
+        <app-view-container [crewsList]="crews">
           <ng-container *ngFor="let crew of crews">
             <ng-template appTemplateRef >
-              <div class="max-w-md text-center">
-                <h3 class="text-base">{{crew.role}}</h3>
-                <h2 class="text-2xl mb-4">{{crew.name}}</h2>
-                <p class="text-[15px]">{{crew.bio}}</p>
+              <div class="max-w-lg text-white font-serif text-center">
+                <h3 class="text-base  mb-2 md:text-2xl">{{crew.role}}</h3>
+                <h2 class="text-2xl mb-4 md:text-[2.5rem]">{{crew.name}}</h2>
+                <p class="lowercase text-[15px] text-sky-blue font-sans md:text-base">{{crew.bio}}</p>
               </div>
             </ng-template>
           </ng-container>

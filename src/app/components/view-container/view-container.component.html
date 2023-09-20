@@ -1,24 +1,29 @@
 
-<section class="flex flex-col items-center">
-
-  <div class="block md:hidden">---------------------------------------------------</div>
-
-    <div class="order-1">
-      <button
-        class="h-[10px] w-[10px] rounded-full bg-white m-2"
-        *ngFor="let item of views; index as i"
-        (click)="loadTemplate(i)"
-      >
-      </button>
-    </div>
-
+<section>
     <!-- Marcador de posicion para incorporar las vistas -->
     <ng-content></ng-content>
 
-    <!-- Contenedor de vistas -->
-    <div class="order-2 md:order-none">
-      <ng-template appViewContainer></ng-template>
-    </div>
+    <article class="flex flex-col items-center">
+      <figure class="h-56 w-[180px] md:hidden">
+        <img [src]="crewsList[indexPhoto()].images.png" alt="photo" class="h-full w-full" >
+      </figure>
+      <div class="flex flex-col items-center border-t border-[#383B4B] pt-8 md:border-t-0">
+        <ul class="mb-8 md:order-2 md:mb-0 md:mt-8">
+          <button
+            class="h-[10px] w-[10px] rounded-full bg-white m-2"
+            *ngFor="let item of views; index as i"
+            (click)="loadTemplate(i)"
+          >
+          </button>
+        </ul>
+
+        <!-- Contenedor de vistas -->
+        <div class="md:order-1">
+          <ng-template appViewContainer></ng-template>
+        </div>
+      </div>
+    </article>
+
 </section>
 
 
