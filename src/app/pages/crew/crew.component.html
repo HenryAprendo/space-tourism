@@ -13,10 +13,10 @@
         <app-view-container [crewsList]="crews">
           <ng-container *ngFor="let crew of crews">
             <ng-template appTemplateRef >
-              <div class="max-w-lg text-white font-serif text-center">
-                <h3 class="text-base  mb-2 md:text-2xl">{{crew.role}}</h3>
-                <h2 class="text-2xl mb-4 md:text-[2.5rem]">{{crew.name}}</h2>
-                <p class="lowercase text-[15px] text-sky-blue font-sans md:text-base">{{crew.bio}}</p>
+              <div class="max-w-3xl text-white font-serif text-center xl:text-start">
+                <h3 class="text-base  mb-2 md:text-2xl xl:text-[2rem] xl:mb-4">{{crew.role}}</h3>
+                <h2 class="text-2xl mb-4 md:text-[2.5rem] xl:text-[3.5rem] xl:mb-7">{{crew.name}}</h2>
+                <p class="lowercase first-letter:uppercase max-w-[400px] text-[15px] text-sky-blue font-sans md:text-base xl:text-lg">{{crew.bio}}</p>
               </div>
             </ng-template>
           </ng-container>
