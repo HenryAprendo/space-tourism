@@ -5,7 +5,7 @@ import { DestinationDetailsComponent } from './pages/destination-details/destina
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'crew',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -26,12 +26,22 @@ export const routes: Routes = [
     ]
   },
   {
+    title: 'Crews',
     path: 'crew',
     loadComponent: () => import('./pages/crew/crew.component').then(m => m.CrewComponent),
     data: {
       preload: true
     },
+  },
+  {
+    title: 'Technology',
+    path: 'technology',
+    loadComponent: () => import('./pages/technology/technology.component').then(m => m.TechnologyComponent),
+    data: {
+      preload: true
+    }
   }
+
 ];
 
 
