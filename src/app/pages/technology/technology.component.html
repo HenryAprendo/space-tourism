@@ -5,23 +5,36 @@
   <app-navbar />
 
   <main>
-    <section class="uppercase max-w-5xl flex flex-col items-center xl:items-start xl:mx-auto">
-      <h2 class="text-white text-base mb-8 md:text-xl md:self-start md:mt-10 md:mb-16 xl:m-0 pt-0">
+    <section class="max-w-3xl flex flex-col items-center xl:items-start xl:max-w-7xl mx-auto xl:pl-32">
+      <h2 class="text-white text-base mb-8 md:text-xl md:self-start md:mt-10 md:mb-16 xl:ml-3 xl:mb-4">
         <span class="text-sky-blue">03</span> SPACE LAUNCH 101
       </h2>
-      <div>
-        <!-- <app-view-container [crewsList]="crews">
-          <ng-container *ngFor="let crew of crews">
-            <ng-template appTemplateRef >
-              <div class="max-w-3xl text-white font-serif text-center xl:text-start">
-                <h3 class="text-base  mb-2 md:text-2xl xl:text-[2rem] xl:mb-4">{{crew.role}}</h3>
-                <h2 class="text-2xl mb-4 md:text-[2.5rem] xl:text-[3.5rem] xl:mb-7">{{crew.name}}</h2>
-                <p class="lowercase first-letter:uppercase max-w-[400px] text-[15px] text-sky-blue font-sans md:text-base xl:text-lg">{{crew.bio}}</p>
-              </div>
-            </ng-template>
-          </ng-container>
-        </app-view-container> -->
-      </div>
+      <article *ngIf="tech() as tech" class="flex flex-col xl:flex-row-reverse xl:justify-between xl:w-full" >
+        <figure class="h-44 w-screen max-w-3xl md:-ml-5 md:h-72 xl:ml-0 xl:w-[400px] xl:h-[400px] xl:flex-shrink-0">
+          <img [src]="tech.images.landscape" alt="banner" class="w-full h-full object-cover xl:hidden" >
+          <img [src]="tech.images.portrait" alt="banner" class="w-full h-full object-cover hidden xl:block" >
+        </figure>
+        <div class="mt-8 px-3 xl:flex xl:items-center xl:gap-x-10">
+          <ul class="flex gap-x-6 justify-center items-center xl:flex-col xl:gap-y-6">
+            <li *ngFor="let item of technologies; index as i"
+              [ngClass]="positionActual === i ? 'bg-white text-black' : '' "
+              class="w-10 h-10 border border-white/25 text-white flex items-center justify-center rounded-full hover:cursor-pointer md:w-[3.75rem] md:h-[3.75rem]"
+              (click)="changeTech(i)"
+            >{{i + 1}}</li>
+          </ul>
+          <div class="mt-8 text-center max-w-sm mx-auto xl:text-start xl:mt-0 xl:mx-0 xl:max-w-[500px]">
+            <h2 class="uppercase text-sm xl:text-base xl:mb-3">The terminology...</h2>
+            <h3 class="uppercase text-2xl font-serif text-white mb-4 xl:text-[3.5rem] xl:mb-6">{{tech.name}}</h3>
+            <p class="text-[15px]">{{tech.description}}</p>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
 </section>
+
+
+
+
+
+
