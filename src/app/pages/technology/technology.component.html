@@ -1,6 +1,6 @@
 <section
-  class="technology_container bg-cover bg-center bg-no-repeat object-cover max-w-full min-h-screen pl-6 pr-6 pt-6 pb-14 text-sky-blue
-   md:pt-0 md:pr-0 xl:py-6 xl:px-0"
+  class="bg-technology-mobile bg-cover bg-center bg-no-repeat object-cover max-w-full min-h-screen pl-6 pr-6 pt-6 pb-14 text-sky-blue
+  md:bg-technology-tablet md:pt-0 md:pr-0 xl:bg-technology-desktop xl:py-6 xl:px-0"
 >
   <app-navbar />
 
@@ -17,7 +17,7 @@
         <div class="mt-8 px-3 xl:flex xl:items-center xl:gap-x-10">
           <ul class="flex gap-x-6 justify-center items-center xl:flex-col xl:gap-y-6">
             <li *ngFor="let item of technologies; index as i"
-              [ngClass]="positionActual === i ? 'bg-white text-black' : '' "
+              [ngClass]="positionActual === i ? 'text-black/100 bg-white' : '' "
               class="w-10 h-10 border border-white/25 text-white flex items-center justify-center rounded-full hover:cursor-pointer md:w-[3.75rem] md:h-[3.75rem]"
               (click)="changeTech(i)"
             >{{i + 1}}</li>

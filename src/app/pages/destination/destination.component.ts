@@ -12,7 +12,6 @@ type Links = string[];
   standalone: true,
   imports: [CommonModule, NavbarComponent, RouterLink, RouterLinkActive, RouterLinkWithHref, RouterOutlet],
   templateUrl: './destination.component.html',
-  styleUrls: ['./destination.component.scss']
 })
 export class DestinationComponent implements OnInit {
 

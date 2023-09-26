@@ -11,7 +11,6 @@ import { TemplateRefDirective } from '../../directives/template-ref.directive';
   standalone: true,
   imports: [CommonModule, NavbarComponent, ViewContainerComponent, TemplateRefDirective],
   templateUrl: './crew.component.html',
-  styleUrls: ['./crew.component.scss']
 })
 export class CrewComponent implements OnInit {
 

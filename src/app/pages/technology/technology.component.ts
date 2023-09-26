@@ -9,7 +9,6 @@ import { Technology } from 'src/app/models/technology.model';
   standalone: true,
   imports: [CommonModule, NavbarComponent],
   templateUrl: './technology.component.html',
-  styleUrls: ['./technology.component.scss']
 })
 export class TechnologyComponent implements OnInit {
 
