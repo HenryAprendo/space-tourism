@@ -4,8 +4,8 @@
     <ng-content></ng-content>
 
     <article class="flex flex-col items-center xl:flex-row-reverse xl:gap-x-16">
-      <figure class="h-56 w-[180px] md:hidden xl:block xl:w-[400px] xl:h-[400px]">
-        <img [src]="crewsList[indexPhoto()].images.png" alt="photo" class="h-full w-full " >
+      <figure class="relative h-56 w-[180px] md:hidden xl:block xl:w-[400px] xl:h-[400px]">
+        <img [ngSrc]="crewsList[indexPhoto()].images.png" alt="photo" class="h-full w-full" fill priority >
       </figure>
       <div class="flex-shrink-0 flex flex-col items-center border-t border-[#383B4B] pt-8 md:border-t-0 xl:mt-[88px] xl:items-start">
         <ul class="mb-8 md:order-2 md:mb-0 md:mt-8">

@@ -6,6 +6,6 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes, withPreloading(PreloadStrategyService)),
+    provideRouter(routes, withPreloading(PreloadAllModules)),
   ]
 };

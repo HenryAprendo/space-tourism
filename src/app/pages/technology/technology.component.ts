@@ -1,13 +1,14 @@
 import { Component, OnInit, WritableSignal, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { NavbarComponent } from '../../components/shared/navbar/navbar.component';
 import { DataService } from '../../services/data.service';
 import { Technology } from 'src/app/models/technology.model';
 
+
 @Component({
   selector: 'app-technology',
   standalone: true,
-  imports: [CommonModule, NavbarComponent],
+  imports: [CommonModule, NavbarComponent, NgOptimizedImage],
   templateUrl: './technology.component.html',
 })
 export class TechnologyComponent implements OnInit {

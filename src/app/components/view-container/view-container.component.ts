@@ -1,13 +1,14 @@
 import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList, ViewChild, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage} from '@angular/common';
 import { ViewContainerDirective } from '../../directives/view-container.directive';
 import { TemplateRefDirective } from '../../directives/template-ref.directive';
 import { Crew } from '../../models/crew.model';
 
+
 @Component({
   selector: 'app-view-container',
   standalone: true,
-  imports: [CommonModule, ViewContainerDirective],
+  imports: [CommonModule, ViewContainerDirective, NgOptimizedImage],
   templateUrl: './view-container.component.html',
   styleUrls: ['./view-container.component.scss']
 })

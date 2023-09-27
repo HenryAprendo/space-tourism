@@ -6,19 +6,19 @@
 
   <main>
     <section class="max-w-3xl flex flex-col items-center xl:items-start xl:max-w-7xl mx-auto xl:pl-32">
-      <h2 class="text-white text-base mb-8 md:text-xl md:self-start md:mt-10 md:mb-16 xl:ml-3 xl:mb-4">
+      <h2 class="text-white text-base mb-8 md:text-xl md:self-start md:mt-10 md:mb-16 xl:ml-3 xl:mb-0">
         <span class="text-sky-blue">03</span> SPACE LAUNCH 101
       </h2>
       <article *ngIf="tech() as tech" class="flex flex-col xl:flex-row-reverse xl:justify-between xl:w-full" >
-        <figure class="h-44 w-screen max-w-3xl md:-ml-5 md:h-72 xl:ml-0 xl:w-[400px] xl:h-[400px] xl:flex-shrink-0">
-          <img [src]="tech.images.landscape" alt="banner" class="w-full h-full object-cover xl:hidden" >
-          <img [src]="tech.images.portrait" alt="banner" class="w-full h-full object-cover hidden xl:block" >
+        <figure class="relative h-44 w-screen max-w-3xl md:-ml-5 md:h-72 xl:ml-0 xl:w-[400px] xl:h-[400px] xl:flex-shrink-0">
+          <img [ngSrc]="tech.images.landscape" alt="banner" class="w-full h-full object-cover xl:hidden" fill priority >
+          <img [ngSrc]="tech.images.portrait" alt="banner" class="w-full h-full object-cover hidden xl:block" fill priority >
         </figure>
         <div class="mt-8 px-3 xl:flex xl:items-center xl:gap-x-10">
-          <ul class="flex gap-x-6 justify-center items-center xl:flex-col xl:gap-y-6">
+          <ul class="text-white flex gap-x-6 justify-center items-center xl:flex-col xl:gap-y-6">
             <li *ngFor="let item of technologies; index as i"
               [ngClass]="positionActual === i ? 'text-black/100 bg-white' : '' "
-              class="w-10 h-10 border border-white/25 text-white flex items-center justify-center rounded-full hover:cursor-pointer md:w-[3.75rem] md:h-[3.75rem]"
+              class="w-10 h-10 border border-white/25 flex items-center justify-center rounded-full hover:cursor-pointer md:w-[3.75rem] md:h-[3.75rem]"
               (click)="changeTech(i)"
             >{{i + 1}}</li>
           </ul>
